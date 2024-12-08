@@ -1,9 +1,9 @@
 import * as React from 'react';
 import classes from './Footer.module.css'
-import { AboutUs } from './AboutUs';
-import { SocialItem } from './SocialItem';
-import { Contacts } from './Contacts';
-import { Copyright } from './Copyright';
+import { AboutUs } from './Elements/AboutUs';
+import { SocialItem } from './Elements/SocialItem';
+import { Contacts } from './Elements/Contacts';
+import { Copyright } from './Elements/Copyright';
 
 export const Footer: React.FC = () => {
     return(

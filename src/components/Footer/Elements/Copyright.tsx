@@ -1,5 +1,5 @@
 import * as React from 'react';
-import classes from './Footer.module.css'
+import classes from '../Footer.module.css'
 
 export const Copyright: React.FC = () => {
     return(
