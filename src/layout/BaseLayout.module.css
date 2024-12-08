@@ -1,0 +1,19 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    padding: 16px;
+}
+
+header {
+    top: 0;
+    z-index: 10;
+}
+
+footer {
+    padding: 10px;
+}
