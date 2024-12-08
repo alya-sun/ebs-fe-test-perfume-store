@@ -1,7 +1,7 @@
 import { createContext, ReactNode, useCallback, useState } from 'react';
-import { Product } from '@/hooks/useProducts';
+import { Product } from '../services/productService';
 
-export interface CartItemProps extends Product {
+export interface CartItemProps extends Product{
     quantity: number;
 }
 
