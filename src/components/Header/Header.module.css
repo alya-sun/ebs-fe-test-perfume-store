@@ -2,11 +2,16 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
     padding: 20px 40px;
     background-color: #ebc5f9;
     box-shadow: 0 2px 4px rgba(42, 3, 73, 0.366);
     margin: -1em;
+}
+.references {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 69%;
 }
 
 .logo {
@@ -17,13 +22,12 @@
 .logo-image {
     width: 6rem;
     height: 6rem;
-    /* margin-right: 10px; */
 }
 
 .logo-text {
     font-size: 1.5rem;
     font-weight: bold;
-    color: rgb(41, 3, 73);
+    color: rgb(70, 2, 125);
 }
 
 .navigation .nav-list {

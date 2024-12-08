@@ -10,17 +10,19 @@ export const Header: React.FC = () => {
     return(
         <header className={classes.header}>
             <Logo />
-            <IconButton
-                iconSrc="/assets/images/icons/profile.png"
-                altText="Profile"
-                onClick={goToProfile}
-            />
-            <IconButton
-                iconSrc="/assets/images/icons/cart.png"
-                altText="Cart"
-                onClick={goToCart}
-            />
-            <Navigation />
+            <div className={classes.references}>
+                <Navigation />
+                <IconButton
+                    iconSrc="/assets/images/icons/profile.png"
+                    altText="Profile"
+                    onClick={goToProfile}
+                />
+                <IconButton
+                    iconSrc="/assets/images/icons/cart.png"
+                    altText="Cart"
+                    onClick={goToCart}
+                />
+            </div>
             
         </header>
     );

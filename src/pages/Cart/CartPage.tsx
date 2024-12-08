@@ -13,9 +13,14 @@ export const CartPage: React.FC = () => {
 
     return (
         <div className={classes['cart-page']}>
-            <h1>Shopping Cart</h1>
-            <CartItems/>
-            <Summary/>
+            <div className={classes['header']}>
+                <h1>Shopping Cart</h1>
+            </div>
+
+            <div className={classes['main']}>
+                <CartItems />
+                <Summary />
+            </div>
         </div>
     )
 }
