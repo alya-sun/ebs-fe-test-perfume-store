@@ -1,5 +1,5 @@
 import * as React from 'react';
-import classes from './Header.module.css'
+import classes from '../Header.module.css'
 
 
 export const Logo: React.FC = () => {

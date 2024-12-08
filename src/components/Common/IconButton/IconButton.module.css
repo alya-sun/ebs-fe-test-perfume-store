@@ -7,14 +7,16 @@
     justify-content: center;
     padding: 8px;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
+    /* transition: background-color 0.3s ease; */
+    color: rgb(82, 3, 148);
 }
 
 .icon-button:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    color: #7d0d7f;
 }
 
 .icon {
     width: 24px;
     height: 24px;
+    color: rgb(82, 3, 148);
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Navigation} from './Navigation/Navigation';
-import {Logo} from './Logo';
+import {Logo} from './Logo/Logo';
 import classes from './Header.module.css'
 import { IconButton } from '../Common/IconButton/IconButton';
 import { useNavigation } from '../../hooks/useNavigation';
@@ -9,6 +9,7 @@ export const Header: React.FC = () => {
     const { goToCart, goToProfile } = useNavigation();
     return(
         <header className={classes.header}>
+            <Logo />
             <IconButton
                 iconSrc="/assets/images/icons/profile.png"
                 altText="Profile"
@@ -19,7 +20,6 @@ export const Header: React.FC = () => {
                 altText="Cart"
                 onClick={goToCart}
             />
-            <Logo />
             <Navigation />
             
         </header>
