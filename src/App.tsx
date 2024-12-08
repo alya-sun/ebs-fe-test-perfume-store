@@ -1,10 +1,22 @@
+import { Route, Routes } from 'react-router-dom';
+import { BaseLayout } from './layout';
+import { CartProvider } from './contexts/CartContext';
+import { CartPage } from './pages/Cart/CartPage';
+import { HomePage } from './pages/Home/HomePage';
+import { ProductProvider } from './contexts/ProductContext';
+
 function App() {
   return (
-    <div style={{ textAlign: 'center' }}>
-      <h1>Welcome to the Front-End Developer Test!</h1>
-      <p>We wish you the best of luck. Please make sure to read the README file for
-        instructions.</p>
-    </div>
+    <BaseLayout>
+      <ProductProvider>
+        <CartProvider>
+          <Routes>
+            <Route path="/" element={<HomePage/>} />
+            <Route path="/cart" element={<CartPage/>} />
+          </Routes>
+        </CartProvider>
+      </ProductProvider>
+    </BaseLayout>
   )
 }
 

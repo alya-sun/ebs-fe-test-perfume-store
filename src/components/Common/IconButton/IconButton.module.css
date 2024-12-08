@@ -1,0 +1,23 @@
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 4px;
+    /* transition: background-color 0.3s ease; */
+    color: rgb(82, 3, 148);
+    margin: 0 9px;
+}
+
+.icon-button:hover {
+    color: #7d0d7f;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    color: rgb(82, 3, 148);
+}

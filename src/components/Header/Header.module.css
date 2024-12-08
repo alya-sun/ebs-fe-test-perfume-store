@@ -1,0 +1,52 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ebc5f9;
+    box-shadow: 0 2px 4px rgba(42, 3, 73, 0.366);
+    margin: -1em;
+}
+.references {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 69%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 6rem;
+    height: 6rem;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(70, 2, 125);
+}
+
+.navigation .nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: rgb(82, 3, 148);
+    font-size: 1rem;
+}
+
+.nav-link:hover {
+    color: #7d0d7f;
+}
