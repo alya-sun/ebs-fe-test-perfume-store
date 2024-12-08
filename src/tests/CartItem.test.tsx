@@ -24,6 +24,11 @@ describe('CartItem', () => {
         category: 'Category A',
         price: 99.99,
         image: 'https://via.placeholder.com/150',
+        description: 'Testing',
+        rating: {
+            rate: 5,
+            count: 145,
+        },
         quantity: 2,
     };
 
