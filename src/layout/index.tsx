@@ -1,15 +1,14 @@
+import * as React from 'react';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
-import { MainContent } from '@/components/MainContent';
-import * as React from 'react';
 import classes from './BaseLayout.module.css'
 
-export const BaseLayout: React.FC = () => {
+export const BaseLayout = ({ children }: {children: React.ReactNode}) => {
     return(
         <div className={classes.layout}>
             <Header/>
             <main className={classes.content}>
-                <MainContent/>
+                {children}
             </main>
             <Footer/>
         </div>

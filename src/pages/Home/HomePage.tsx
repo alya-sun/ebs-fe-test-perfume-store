@@ -1,31 +1,22 @@
-import { useProducts, Product } from '@/hooks/useProducts';
-import * as React from 'react';
-import classes from './MainContent.module.css'
-import { useState } from "react";
+import React, { useState } from 'react';
+import { useProducts } from '@/hooks/useProducts';
+import { useCart } from '@/hooks/useCart';
+import classes from '@/components/Home/Home.module.css';
 
-export const MainContent: React.FC = () => {
+export const HomePage: React.FC = () => {
     const { products, loading, error } = useProducts();
-    const [cart, setCart] = useState<Product[]>([]);
     const [filter, setFilter] = useState('');
     const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
-
-    const addToCart = (product: Product) => {
-        setCart((prev) => [...prev, product]);
-    };
-
-    const removeFromCart = (productId: number) => {
-        setCart((prev) => prev.filter((product) => product.id !== productId));
-    };
+    const { addToCart, removeFromCart } = useCart();
 
     const filteredProducts = products.filter(
-        (product) => filter ? product.category.toLowerCase().includes(filter.toLowerCase()) : true
-    )
-    .sort((a,b) =>
+        (product) => (filter ? product.category.toLowerCase().includes(filter.toLowerCase()) : true)
+    ).sort((a, b) =>
         sortOrder === 'asc' ? a.price - b.price : b.price - a.price
     );
 
     if (loading) return <div>Loading...</div>;
-    if(error) return <div>Error: {error}</div>;
+    if (error) return <div>Error: {error}</div>;
 
     return (
         <div className={classes['home-page']}>
@@ -38,7 +29,6 @@ export const MainContent: React.FC = () => {
                         </option>
                     ))}
                 </select>
-
                 <button onClick={() => setSortOrder('asc')}>Sort by price: Asc</button>
                 <button onClick={() => setSortOrder('desc')}>Sort by price: Desc</button>
             </div>

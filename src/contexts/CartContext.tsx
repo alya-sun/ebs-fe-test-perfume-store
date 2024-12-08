@@ -1,12 +1,12 @@
 import { createContext, ReactNode, useCallback, useState } from 'react';
 import { Product } from '@/hooks/useProducts';
 
-interface CartItem extends Product {
+export interface CartItemProps extends Product {
     quantity: number;
 }
 
 export interface CartContextProps {
-    cart: CartItem[];
+    cart: CartItemProps[];
     addToCart: (product: Product) => void;
     removeFromCart: (productId: number) => void;
     updateQuantity: (productId: number, quantity: number) => void;
@@ -18,7 +18,7 @@ export interface CartContextProps {
 export const CartContext = createContext<CartContextProps | undefined>(undefined);
 
 export const CartProvider = ({ children }: {children: ReactNode}) => {
-    const [cart, setCart] = useState<CartItem[]>([]);
+    const [cart, setCart] = useState<CartItemProps[]>([]);
 
     const addToCart = (product: Product) => {
         setCart((prev) => {
