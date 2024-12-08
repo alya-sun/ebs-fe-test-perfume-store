@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Exo 2', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -11,6 +13,13 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+button {
+  font-family: 'Exo 2', sans-serif;
+}
+
+select {
+  font-family: 'Exo 2', sans-serif;
 }
 
 h1 {
