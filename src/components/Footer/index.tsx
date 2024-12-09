@@ -8,29 +8,34 @@ import { Copyright } from './Elements/Copyright';
 export const Footer: React.FC = () => {
     return(
         <footer className={classes.footer}>
-            <AboutUs/>
+            <div className={classes['footer-details']}>
+                
+                <AboutUs/>
 
-            < SocialItem
-                url="https://instagram.com"
-                iconSrc="/assets/images/icons/instagram.png"
-                altText="Instagram"
-            />
-            < SocialItem
-                url="https://facebook.com"
-                iconSrc="/assets/images/icons/facebook.png"
-                altText="Facebook"
-            />
-            < SocialItem
-                url="https://twitter.com"
-                iconSrc="/assets/images/icons/twitter.png"
-                altText="Twitter"
-            />
+                <div className={classes['social-items']}>
+                    < SocialItem
+                        url="https://instagram.com"
+                        iconSrc="/assets/images/icons/instagram.png"
+                        altText="Instagram"
+                    />
+                    < SocialItem
+                        url="https://facebook.com"
+                        iconSrc="/assets/images/icons/facebook.png"
+                        altText="Facebook"
+                    />
+                    < SocialItem
+                        url="https://twitter.com"
+                        iconSrc="/assets/images/icons/twitter.png"
+                        altText="Twitter"
+                    />
+                </div>
 
-            <Contacts
-                phone="+1 234 567890"
-                email="support@gsparfum.com"
-                address="123 Perfume St., Fragrance City"
-            />
+                <Contacts
+                    phone="+1 234 567890"
+                    email="support@gsparfum.com"
+                    address="123 Perfume St., Fragrance City"
+                />
+            </div>
 
             <Copyright />
 

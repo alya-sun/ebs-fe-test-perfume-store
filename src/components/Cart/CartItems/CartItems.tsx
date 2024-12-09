@@ -11,12 +11,15 @@ export const CartItems: React.FC = () => {
                     <CartItem key={item.id} {...item} />
                 ))}
             </div>
-
-            <span>{totalProducts} items</span>
             
-            <button className={classes['clear-button']} onClick={clearCart}>
-                Clear Cart
-            </button>
+            <div className={classes['items-control']}>
+                <span>{totalProducts} items</span>
+                
+                <button className={classes['clear-button']} onClick={clearCart}>
+                    Clear Cart
+                </button>
+            </div>
+
         </div>
     );
 }

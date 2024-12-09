@@ -7,7 +7,7 @@ export const Navigation: React.FC = () => {
         <nav className={classes.navigation}>
             <ul className={classes['nav-list']}>
                 <NavigationItem href="/" label="Home" />
-                <NavigationItem href="/about" label="About us" />
+                <NavigationItem href="/" label="About us" />
             </ul>
         </nav>
     );
